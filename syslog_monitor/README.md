@@ -1,7 +1,18 @@
 # Ubuntuのsyslogを監視してUDPで外部へログを送信
 <img src="data/images/2025-04-08 155300.png">
 
-## PostgreSQLの設定
+# 目次
+1. PostgreSQLの設定
+    - 1-1. 設定ファイルの編集
+    - 1-2. 意図的にエラーを発生させる
+    - 1-3. PostgreSQLのlogの確認
+2. syslog監視スクリプトの作成
+3. UDP受信プログラムの実行
+4. syslog監視スクリプトの自動実行
+
+# 1. PostgreSQLの設定
+
+## 1-1. 設定ファイルの編集
 
 PostgreSQLのインストール
 ```
@@ -52,7 +63,7 @@ Apr  8 12:48:13 ubuntu-01 postgres[117400]: [9-2] 2025-04-08 12:48:13.919 JST [1
 Apr  8 12:48:13 ubuntu-01 postgres[117400]: [9-3] 2025-04-08 12:48:13.919 JST [117400] postgres@test STATEMENT:  INSERT INTO users (user_id, email)
 ```
 
-## PostgreSQLに意図的にエラーを発生させる
+## 1-2. 意図的にエラーを発生させる
 
 DBサーバ接続
 ```
@@ -105,8 +116,32 @@ SELECT * FROM not_exist_table;
 SELECT not_exist_column FROM test;
 ```
 
+## 1-3. PostgreSQLのlogの確認
 
-## syslogのPostgreSQLのlogをUDPで送信するスクリプト
+ログイン
+```
+sudo -i -u postgres
+```
+
+ログの確認
+```
+cd /var/lib/postgresql/14/main/log
+ls
+cat postgresql-2025-04-08_084308.log
+```
+
+```
+2025-04-08 12:48:13.919 JST [117400] postgres@test ERROR:  duplicate key value violates unique constraint "users_pkey"
+2025-04-08 12:48:13.919 JST [117400] postgres@test DETAIL:  Key (user_id)=(satoshi) already exists.
+2025-04-08 12:48:13.919 JST [117400] postgres@test STATEMENT:  INSERT INTO users (user_id, email)
+```
+
+ログアウト
+```
+exit
+```
+
+# 2. syslog監視スクリプトの作成
 ```
 sudo nano /usr/local/bin/monitor_postgresql_log.sh
 ```
@@ -148,32 +183,7 @@ done
 /usr/local/bin/monitor_postgresql_log.sh
 ```
 
-## PostgreSQLのlogの確認
-
-ログイン
-```
-sudo -i -u postgres
-```
-
-ログの確認
-```
-cd /var/lib/postgresql/14/main/log
-ls
-cat postgresql-2025-04-08_084308.log
-```
-
-```
-2025-04-08 12:48:13.919 JST [117400] postgres@test ERROR:  duplicate key value violates unique constraint "users_pkey"
-2025-04-08 12:48:13.919 JST [117400] postgres@test DETAIL:  Key (user_id)=(satoshi) already exists.
-2025-04-08 12:48:13.919 JST [117400] postgres@test STATEMENT:  INSERT INTO users (user_id, email)
-```
-
-ログアウト
-```
-exit
-```
-
-# WindowsサーバでPostgreSQLのログ受信
+# 3. UDP受信プログラムの実行
 
 syslog_receiverの設定値を編集
 ```
@@ -205,7 +215,7 @@ syslog_receiver.logの確認
 pyinstaller syslog_receiver.py --name syslog_receiver_v1.0.exe --onefile
 ```
 
-# スクリプトの自動実行
+# 4. ログ送信スクリプトの自動実行
 
 スクリプトに実行権限を付与
 ```
