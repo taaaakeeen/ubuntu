@@ -1,4 +1,5 @@
 import traceback
+import os
 from udp_receiver import UDPReceiver
 from logger import RotatedLogger
 from read_config import read_config
@@ -16,6 +17,8 @@ BACKUP_COUNT = int(config.get('log', 'BACKUP_COUNT'))
 class SyslogReceiver(UDPReceiver):
     def __init__(self, host='0.0.0.0', port=PORT, buffer_size=BUFFER_SIZE):
         super().__init__(host, port, buffer_size)
+
+        os.makedirs("log", exist_ok=True)
 
         self.app_logger = RotatedLogger(
             name='SyslogReceiver', 

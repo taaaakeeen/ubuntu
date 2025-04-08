@@ -5,7 +5,7 @@
 1. PostgreSQLの設定
     - 1-1. 設定ファイルの編集
     - 1-2. 意図的にエラーを発生させる
-    - 1-3. logの確認
+    - 1-3. ログの確認
 2. syslog監視スクリプトの作成
 3. UDP受信プログラムの実行
 4. syslog監視スクリプトの自動実行
@@ -116,7 +116,7 @@ SELECT * FROM not_exist_table;
 SELECT not_exist_column FROM test;
 ```
 
-## 1-3. logの確認
+## 1-3. ログの確認
 
 ログイン
 ```
@@ -185,17 +185,23 @@ done
 
 # 3. UDP受信プログラムの実行
 
-syslog_receiverの設定値を編集
+syslog_receiver.confを編集
 ```
 [recv]
-PORT = 10000 # 受信ポート
-BUFFER_SIZE = 4096 # 受信データの最大サイズ
+# PORT: 受信ポート
+# BUFFER_SIZE: 受信データの最大サイズ
+PORT = 10000
+BUFFER_SIZE = 4096
 
 [log]
-LOG_FILE = log/syslog_receiver.log # 出力するログファイル
-WHEN = midnight # ローテーションのタイミング
-INTERVAL = 1 # ローテーションの間隔
-BACKUP_COUNT = 30 # バックアップの保持数
+# LOG_FILE: 出力するログファイル
+# WHEN: ローテーションのタイミング
+# INTERVAL: ローテーションの間隔
+# BACKUP_COUNT: バックアップの保持数
+LOG_FILE = log/syslog_receiver.log
+WHEN = midnight
+INTERVAL = 1
+BACKUP_COUNT = 30
 ```
 
 syslog_receiverの実行
