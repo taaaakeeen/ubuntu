@@ -1,0 +1,7 @@
+# files
+*.exe
+*.pyc
+*.spec
+
+# dirs
+syslog_monitor/build
