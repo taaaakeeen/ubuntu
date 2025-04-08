@@ -5,7 +5,7 @@
 1. PostgreSQLの設定
     - 1-1. 設定ファイルの編集
     - 1-2. 意図的にエラーを発生させる
-    - 1-3. PostgreSQLのlogの確認
+    - 1-3. logの確認
 2. syslog監視スクリプトの作成
 3. UDP受信プログラムの実行
 4. syslog監視スクリプトの自動実行
@@ -116,7 +116,7 @@ SELECT * FROM not_exist_table;
 SELECT not_exist_column FROM test;
 ```
 
-## 1-3. PostgreSQLのlogの確認
+## 1-3. logの確認
 
 ログイン
 ```
