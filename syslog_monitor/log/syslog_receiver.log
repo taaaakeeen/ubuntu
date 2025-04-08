@@ -1,9 +1,9 @@
 2025-04-08 12:37:26.563 - SyslogReceiver - INFO - [192.168.0.20] test message
 2025-04-08 12:37:30.916 - SyslogReceiver - INFO - [192.168.0.20] test message
-2025-04-08 16:07:07.009 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:06:53 ubuntu-01 postgres[2506]: [12-1] 2025-04-08 16:06:53.426 JST [2506] postgres@test ERROR:  duplicate key value violates unique constraint "users_pkey"
-2025-04-08 16:07:08.013 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:06:53 ubuntu-01 postgres[2506]: [12-2] 2025-04-08 16:06:53.426 JST [2506] postgres@test DETAIL:  Key (user_id)=(satoshi) already exists.
-2025-04-08 16:07:09.020 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:06:53 ubuntu-01 postgres[2506]: [12-3] 2025-04-08 16:06:53.426 JST [2506] postgres@test STATEMENT:  INSERT INTO users (user_id, email)
-2025-04-08 16:07:12.206 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:06:58 ubuntu-01 postgres[2506]: [13-1] 2025-04-08 16:06:58.620 JST [2506] postgres@test ERROR:  relation "not_exist_table" does not exist at character 15
-2025-04-08 16:07:13.215 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:06:58 ubuntu-01 postgres[2506]: [13-2] 2025-04-08 16:06:58.620 JST [2506] postgres@test STATEMENT:  SELECT * FROM not_exist_table;
-2025-04-08 16:07:17.079 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:07:03 ubuntu-01 postgres[2506]: [14-1] 2025-04-08 16:07:03.492 JST [2506] postgres@test ERROR:  relation "test" does not exist at character 30
-2025-04-08 16:07:18.079 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:07:03 ubuntu-01 postgres[2506]: [14-2] 2025-04-08 16:07:03.492 JST [2506] postgres@test STATEMENT:  SELECT not_exist_column FROM test;
+2025-04-08 16:38:54.224 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:38:40 ubuntu-01 postgres[2506]: [17-1] 2025-04-08 16:38:40.612 JST [2506] postgres@test ERROR:  duplicate key value violates unique constraint "users_pkey"
+2025-04-08 16:38:55.229 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:38:40 ubuntu-01 postgres[2506]: [17-2] 2025-04-08 16:38:40.612 JST [2506] postgres@test DETAIL:  Key (user_id)=(satoshi) already exists.
+2025-04-08 16:38:56.230 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:38:40 ubuntu-01 postgres[2506]: [17-3] 2025-04-08 16:38:40.612 JST [2506] postgres@test STATEMENT:  INSERT INTO users (user_id, email)
+2025-04-08 16:38:59.543 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:38:45 ubuntu-01 postgres[2506]: [18-1] 2025-04-08 16:38:45.939 JST [2506] postgres@test ERROR:  relation "not_exist_table" does not exist at character 15
+2025-04-08 16:39:00.551 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:38:45 ubuntu-01 postgres[2506]: [18-2] 2025-04-08 16:38:45.939 JST [2506] postgres@test STATEMENT:  SELECT * FROM not_exist_table;
+2025-04-08 16:39:03.149 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:38:49 ubuntu-01 postgres[2506]: [19-1] 2025-04-08 16:38:49.539 JST [2506] postgres@test ERROR:  relation "test" does not exist at character 30
+2025-04-08 16:39:04.146 - SyslogReceiver - INFO - [192.168.0.44] Apr  8 16:38:49 ubuntu-01 postgres[2506]: [19-2] 2025-04-08 16:38:49.539 JST [2506] postgres@test STATEMENT:  SELECT not_exist_column FROM test;
