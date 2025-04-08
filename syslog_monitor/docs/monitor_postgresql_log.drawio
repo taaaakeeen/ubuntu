@@ -1,11 +1,17 @@
-<mxfile host="Electron" modified="2025-04-08T06:53:01.976Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="wvJFeENfdEVpS6u_pWOo" version="24.0.4" type="device">
+<mxfile host="Electron" modified="2025-04-08T07:46:01.625Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="j3FQVtJAIIXTxrLNsfOy" version="24.0.4" type="device">
   <diagram name="ページ1" id="SqQ7CckuoGQA1XVf1MXq">
-    <mxGraphModel dx="1728" dy="998" grid="0" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1659" dy="958" grid="0" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="nt9nF4ObV31x2D_x99Zk-2" value="Windows 192.168.0.20/24" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1020" y="630" width="430" height="240" as="geometry" />
+          <mxGeometry x="1020" y="630" width="451" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="nt9nF4ObV31x2D_x99Zk-4" value="2025-04-05.log" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=PlemolJP;" parent="nt9nF4ObV31x2D_x99Zk-2" vertex="1">
+          <mxGeometry x="220" y="150" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nj3evoLdlnzbY02WZ-ZK-1" value="Output" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="nt9nF4ObV31x2D_x99Zk-2">
+          <mxGeometry x="144" y="154" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nt9nF4ObV31x2D_x99Zk-3" value="Linux 192.168.0.44/24" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="50" y="220" width="790" height="650" as="geometry">
@@ -18,13 +24,13 @@
         <mxCell id="nt9nF4ObV31x2D_x99Zk-14" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: PlemolJP, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;tail -f /var/log/syslog | grep postgres&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;spacingLeft=5;" parent="nt9nF4ObV31x2D_x99Zk-3" vertex="1">
           <mxGeometry x="410" y="550" width="350" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="0D5BUlfB0RghyGrrEAo7-1" value="Output" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="nt9nF4ObV31x2D_x99Zk-3">
+        <mxCell id="0D5BUlfB0RghyGrrEAo7-1" value="Output" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="nt9nF4ObV31x2D_x99Zk-3" vertex="1">
           <mxGeometry x="110" y="470" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="0D5BUlfB0RghyGrrEAo7-2" value="Output" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="nt9nF4ObV31x2D_x99Zk-3">
+        <mxCell id="0D5BUlfB0RghyGrrEAo7-2" value="Output" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="nt9nF4ObV31x2D_x99Zk-3" vertex="1">
           <mxGeometry x="110" y="365" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="0D5BUlfB0RghyGrrEAo7-3" value="Reference" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="nt9nF4ObV31x2D_x99Zk-3">
+        <mxCell id="0D5BUlfB0RghyGrrEAo7-3" value="Reference" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="nt9nF4ObV31x2D_x99Zk-3" vertex="1">
           <mxGeometry x="110" y="60" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nt9nF4ObV31x2D_x99Zk-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=-0.003;entryY=0.567;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="JUo1LpAPdXD4S511wLFp-1" target="nt9nF4ObV31x2D_x99Zk-4" edge="1">
@@ -43,9 +49,6 @@
         </mxCell>
         <mxCell id="nt9nF4ObV31x2D_x99Zk-1" value="/usr/local/bin/monitor_postgresql_log.sh" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=PlemolJP;" parent="1" vertex="1">
           <mxGeometry x="490" y="690" width="290" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="nt9nF4ObV31x2D_x99Zk-4" value="2025-04-05.log" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=PlemolJP;" parent="1" vertex="1">
-          <mxGeometry x="1210" y="780" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="nt9nF4ObV31x2D_x99Zk-5" value="/var/log/syslog" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=PlemolJP;" parent="1" vertex="1">
           <mxGeometry x="240" y="690" width="140" height="60" as="geometry" />
