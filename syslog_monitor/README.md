@@ -1,4 +1,5 @@
-# Ubuntuのsyslogを監視してUDPで外部へ送信
+# Ubuntuのsyslogを監視してUDPで外部へログを送信
+<img src="data/images/2025-04-08 155300.png">
 
 ## PostgreSQLの設定
 
